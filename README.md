@@ -17,6 +17,13 @@ npm run preview    # serve the production build
 
 Microphone recording needs a secure context: `localhost` works, but opening the dev server from a phone by IP does not. To test recording on a phone, deploy the build to an HTTPS host (for example GitHub Pages).
 
+## Deployment
+
+Every push to `main` builds the app and publishes it to GitHub Pages ([.github/workflows/deploy.yml](.github/workflows/deploy.yml)):
+https://eytant1.github.io/one_night_app/
+
+Installed copies update themselves the next time they are opened with an internet connection.
+
 ## Installing on a phone
 
 Open the deployed site in Chrome (Android) or Safari (iPhone), then choose **Add to Home Screen**. After the first load the app works with no internet connection. All data is stored on the phone.
