@@ -20,3 +20,7 @@ build/
 
 # Logs
 *.log
+
+# PWA dev service worker
+dev-dist/
+*.tsbuildinfo

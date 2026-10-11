@@ -1,0 +1,116 @@
+// All UI text lives here so another language can be added later.
+export const t = {
+  appName: 'לילה אחד',
+
+  // Common
+  save: 'שמירה',
+  cancel: 'ביטול',
+  delete: 'מחיקה',
+  rename: 'שינוי שם',
+  duplicate: 'שכפול',
+  create: 'יצירה',
+  back: 'חזרה',
+  name: 'שם',
+  copySuffix: '(עותק)',
+  confirmDeleteTitle: 'למחוק?',
+  cannotUndo: 'אי אפשר לבטל את הפעולה.',
+
+  // Games list
+  myGames: 'המשחקים שלי',
+  newGame: 'משחק חדש',
+  gameName: 'שם המשחק',
+  noGames: 'עדיין אין משחקים. צרו משחק חדש כדי להתחיל.',
+  charactersCount: (n: number) => (n === 1 ? 'דמות אחת' : `${n} דמויות`),
+  lineupsCount: (n: number) => (n === 1 ? 'הרכב אחד' : `${n} הרכבים`),
+  deleteGameQ: (name: string) => `למחוק את המשחק "${name}" עם כל הדמויות, ההרכבים וההקלטות?`,
+
+  // Game tabs
+  tabDetails: 'פרטים',
+  tabCharacters: 'דמויות',
+  tabLineups: 'הרכבים',
+
+  // Details tab
+  rulesNotes: 'הערות וחוקים',
+  rulesNotesPlaceholder: 'כאן אפשר לכתוב את החוקים של המשחק…',
+  generalClips: 'הקלטות כלליות',
+  clipOpening: 'פתיחה',
+  clipOpeningHint: '"כולם לעצום עיניים"',
+  clipAfterCharacter: 'אחרי כל דמות',
+  clipAfterCharacterHint: '"…לעצום עיניים". מושמע אחרי כל דמות',
+  clipClosing: 'סיום',
+  clipClosingHint: '"כולם להתעורר"',
+  timing: 'תזמון',
+  pauseBetween: 'הפסקה בין דמויות (שניות)',
+  autoAdvance: 'מעבר אוטומטי לדמות הבאה',
+  discussionMinutes: 'טיימר דיון (דקות, 0 = ללא)',
+
+  // Characters tab
+  newCharacter: 'דמות חדשה',
+  noCharacters: 'עדיין אין דמויות. כל משחק מתחיל ריק, ואתם מגדירים את החוקים.',
+  wakes: 'מתעוררת בלילה',
+  noRecording: 'אין הקלטה',
+  hasRecording: 'יש הקלטה',
+
+  // Character editor
+  editCharacter: 'עריכת דמות',
+  description: 'תיאור',
+  image: 'תמונה',
+  chooseImage: 'בחירת תמונה',
+  removeImage: 'הסרת תמונה',
+  wakesAtNight: 'מתעוררת בלילה',
+  nightInstruction: 'הוראת לילה',
+  instructionText: 'טקסט ההוראה (מוצג על המסך ומוקרא אם אין הקלטה)',
+  nameRequired: 'צריך לתת שם לדמות',
+  deleteCharacterQ: (name: string) => `למחוק את הדמות "${name}"?`,
+  usedInLineups: (names: string[]) => `היא תוסר גם מההרכבים: ${names.join(', ')}.`,
+  discardChangesQ: 'יש שינויים שלא נשמרו. לצאת בלי לשמור?',
+  discard: 'יציאה בלי שמירה',
+
+  // Recorder
+  record: 'הקלטה',
+  stop: 'עצירה',
+  play: 'השמעה',
+  upload: 'העלאת קובץ',
+  removeRecording: 'מחיקת הקלטה',
+  micError: 'אין גישה למיקרופון. צריך לאשר הרשאת מיקרופון.',
+  recordingNotSupported: 'הדפדפן הזה לא תומך בהקלטה. אפשר להעלות קובץ שמע.',
+
+  // Lineups
+  newLineup: 'הרכב חדש',
+  noLineups: 'עדיין אין הרכבים. הרכב הוא בחירה של דמויות וסדר ההתעוררות שלהן.',
+  cardsCount: (n: number) => (n === 1 ? 'קלף אחד' : `${n} קלפים`),
+  players: 'שחקנים',
+  cards: 'קלפים',
+  nightOrder: 'סדר הלילה',
+  doesntWake: 'לא מתעוררות',
+  addCharacters: 'הוספת דמויות',
+  allCharactersAdded: 'כל הדמויות כבר בהרכב.',
+  noCharactersYet: 'אין עדיין דמויות במשחק. צרו דמויות בלשונית "דמויות".',
+  emptyLineup: 'ההרכב ריק. הוסיפו דמויות.',
+  add: 'הוספה',
+  deleteLineupQ: (name: string) => `למחוק את ההרכב "${name}"?`,
+  startNight: 'התחלת לילה',
+  dragToReorder: 'גרירה לשינוי הסדר',
+
+  // Night
+  night: 'לילה',
+  readyTitle: 'מוכנים?',
+  readyHint: 'הניחו את הטלפון במרכז השולחן ולחצו כדי להתחיל.',
+  start: 'התחלה',
+  missingWarning: 'לדמויות האלה אין הקלטה וגם לא טקסט, ולכן הן יוצגו בשקט:',
+  step: (i: number, n: number) => `שלב ${i} מתוך ${n}`,
+  nextIn: (s: number) => `הבא בעוד ${s} שנ׳`,
+  tapNext: 'לחצו ⏭ להמשך',
+  discussion: 'דיון',
+  discussionLeft: 'זמן לדיון',
+  nightOver: 'הלילה נגמר',
+  playAgain: 'שוב מההתחלה',
+  exit: 'יציאה',
+  prev: 'הקודם',
+  next: 'הבא',
+  pause: 'השהיה',
+  resume: 'המשך',
+  noWakingCharacters: 'אין בהרכב דמויות שמתעוררות בלילה.',
+
+  notFound: 'לא נמצא',
+};
